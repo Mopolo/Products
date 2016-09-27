@@ -1,0 +1,11 @@
+<f:layout name="Backend"/>
+
+<f:section name="content">
+    <h1>Fiche du produit : {product.name}</h1>
+
+    <f:flashMessages/>
+    <f:render partial="Backend/Properties" arguments="{product:product}"/>
+    <f:link.action action="list">Retourner à la liste</f:link.action>
+    <br/>
+    <f:link.action action="new">Ajouter un produit</f:link.action>
+</f:section>

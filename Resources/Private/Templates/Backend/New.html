@@ -1,0 +1,14 @@
+<f:layout name="Backend"/>
+
+<f:section name="content">
+    <h1>Ajouter un produit</h1>
+
+    <f:flashMessages/>
+
+    <f:render partial="FormErrors"/>
+
+    <f:form action="create" name="newProduct" object="{newProduct}">
+        <f:render partial="Backend/FormFields"/>
+        <f:form.submit value="Ajouter"/>
+    </f:form>
+</f:section>

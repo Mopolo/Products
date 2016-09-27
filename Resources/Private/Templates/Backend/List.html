@@ -1,0 +1,45 @@
+<f:layout name="Backend"/>
+
+<f:section name="content">
+    <h1>Liste des produits</h1>
+
+    <f:flashMessages/>
+
+    <table class="tx_products table table-striped table-hover">
+        <tr>
+            <th>
+                <f:translate key="tx_products_domain_model_product.name"/>
+            </th>
+            <th>
+                <f:translate key="tx_products_domain_model_product.description"/>
+            </th>
+            <th>
+                <f:translate key="tx_products_domain_model_product.quantity"/>
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        <f:for each="{products}" as="product">
+            <tr>
+                <td>
+                    <f:link.action action="show" arguments="{product : product}"> {product.name}</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="show" arguments="{product : product}"> {product.description}</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="show" arguments="{product : product}"> {product.quantity}</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="edit" arguments="{product : product}">Modifier</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="delete" arguments="{product : product}">Supprimer</f:link.action>
+                </td>
+            </tr>
+        </f:for>
+    </table>
+
+    <f:link.action action="new">Ajouter un produit</f:link.action>
+</f:section>

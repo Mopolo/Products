@@ -1,0 +1,17 @@
+{
+    "name": "mopolo/products",
+    "description": "Une extension TYPO3 pour apprendre.",
+    "type": "typo3-cms-extension",
+    "version": "0.1.0",
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "require-dev": {
+        "fluidtypo3/development": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mopolo\\Products\\": "Classes/"
+        }
+    }
+}

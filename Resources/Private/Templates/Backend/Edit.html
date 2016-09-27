@@ -1,0 +1,14 @@
+<f:layout name="Backend"/>
+
+<f:section name="content">
+    <h1>Edit Product</h1>
+
+    <f:flashMessages/>
+
+    <f:render partial="FormErrors"/>
+
+    <f:form action="update" name="product" object="{product}">
+        <f:render partial="Backend/FormFields" arguments="{product:product}"/>
+        <f:form.submit value="Save"/>
+    </f:form>
+</f:section>

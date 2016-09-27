@@ -1,0 +1,27 @@
+<table class="tx_products table">
+    <tr>
+        <th>
+            <f:translate key="tx_products_domain_model_product.name"/>
+        </th>
+        <th>
+            <f:translate key="tx_products_domain_model_product.description"/>
+        </th>
+        <th>
+            <f:translate key="tx_products_domain_model_product.quantity"/>
+        </th>
+    </tr>
+
+    <f:for each="{products}" as="product">
+        <tr>
+            <td>
+                <f:link.action action="show" arguments="{product : product}" pageUid="{show_pid}"> {product.name}</f:link.action>
+            </td>
+            <td>
+                <f:link.action action="show" arguments="{product : product}" pageUid="{show_pid}"> {product.description}</f:link.action>
+            </td>
+            <td>
+                <f:link.action action="show" arguments="{product : product}" pageUid="{show_pid}"> {product.quantity}</f:link.action>
+            </td>
+        </tr>
+    </f:for>
+</table>

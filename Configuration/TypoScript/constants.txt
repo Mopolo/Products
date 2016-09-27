@@ -1,0 +1,34 @@
+
+plugin.tx_products_frontend {
+	view {
+		# cat=plugin.tx_products_frontend/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:products/Resources/Private/Templates/
+		# cat=plugin.tx_products_frontend/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:products/Resources/Private/Partials/
+		# cat=plugin.tx_products_frontend/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:products/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_products_frontend//a; type=string; label=Default storage PID
+		storagePid = 1
+	}
+	settings {
+		minimumQuantityToBeAvailable = 1
+		showPageUid =
+	}
+}
+
+module.tx_products_backend {
+	view {
+		# cat=module.tx_products_backend/file; type=string; label=Path to template root (BE)
+		templateRootPath = EXT:products/Resources/Private/Templates/
+		# cat=module.tx_products_backend/file; type=string; label=Path to template partials (BE)
+		partialRootPath = EXT:products/Resources/Private/Partials/
+		# cat=module.tx_products_backend/file; type=string; label=Path to template layouts (BE)
+		layoutRootPath = EXT:products/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=module.tx_products_backend//a; type=string; label=Default storage PID
+		storagePid = 1
+	}
+}
